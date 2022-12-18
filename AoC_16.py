@@ -7,6 +7,7 @@ pattern = re.compile('Valve (..) has flow rate=(\d+); tunnels? leads? to valves?
 
 valves = {}
 curr_valve = 'AA'
+visited = set([curr_valve])
 
 for line in lines:
     match = pattern.match(line)
